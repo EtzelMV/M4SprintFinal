@@ -2,7 +2,7 @@ package sprint;
 
 import java.time.LocalDate;
 
-public class Profesional extends Usuario {
+public class Profesional extends Usuario implements Asesoria {
 	private String titulo;
 	private LocalDate fechaIngreso;
 	
@@ -53,5 +53,11 @@ public class Profesional extends Usuario {
 	public String toString() {
 		return "Profesional [run=" + run + ", nombres=" + nombres + ", apellidos=" + apellidos + ", fechaNacimiento="
 				+ fechaNacimiento + ", titulo=" + titulo + ", fechaIngreso=" + fechaIngreso + "]";
+	}
+
+	@Override
+	public void analizarUsuario() {
+		super.analizarUsuario();
+		System.out.println("\tTitulo: " + titulo + "\n\tFecha de ingreso: " + fechaIngreso);
 	}
 }

@@ -2,7 +2,7 @@ package sprint;
 
 import java.time.LocalDate;
 
-public class Administrativo extends Usuario {
+public class Administrativo extends Usuario implements Asesoria {
 	private String area;
 	private String expPrevia;
 	
@@ -65,5 +65,11 @@ public class Administrativo extends Usuario {
 	public String toString() {
 		return "Administrativo [run=" + run + ", nombres=" + nombres + ", apellidos=" + apellidos + ", fechaNacimiento="
 				+ fechaNacimiento + ", area=" + area + ", expPrevia=" + expPrevia + "]";
+	}
+
+	@Override
+	public void analizarUsuario() {
+		super.analizarUsuario();
+		System.out.println("\tArea de trabajo: " + area + "\n\tExperiencia: " + expPrevia);
 	}
 }

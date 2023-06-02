@@ -8,7 +8,7 @@ public class Capacitacion {
 	private String dia;
 	private LocalTime hora;
 	private String lugar;
-	private String duracion;
+	private double duracion;
 	private int cantAsistentes;
 	
 	public Capacitacion() {
@@ -24,7 +24,7 @@ public class Capacitacion {
 	 * @param cantAsistentes
 	 */
 	public Capacitacion(int idCapacitacion, String rutCliente, String dia, LocalTime hora, String lugar,
-			String duracion, int cantAsistentes) {
+			double duracion, int cantAsistentes) {
 		this.idCapacitacion = idCapacitacion;
 		this.rutCliente = rutCliente;
 		this.dia = dia;
@@ -72,7 +72,7 @@ public class Capacitacion {
 	/**
 	 * @return the duracion
 	 */
-	public String getDuracion() {
+	public double getDuracion() {
 		return duracion;
 	}
 
@@ -121,7 +121,7 @@ public class Capacitacion {
 	/**
 	 * @param duracion the duracion to set
 	 */
-	public void setDuracion(String duracion) {
+	public void setDuracion(double duracion) {
 		this.duracion = duracion;
 	}
 
@@ -137,5 +137,9 @@ public class Capacitacion {
 		return "Capacitacion [idCapacitacion=" + idCapacitacion + ", rutCliente=" + rutCliente + ", dia=" + dia
 				+ ", hora=" + hora + ", lugar=" + lugar + ", duracion=" + duracion + ", cantAsistentes="
 				+ cantAsistentes + "]";
+	}
+	
+	public void mostrarDetalle() {
+		System.out.println("\tLa capacitacion será en " + lugar + " a las " + hora + " del dia " + dia + ", y durara " + duracion*60 + " minutos.");
 	}
 }
