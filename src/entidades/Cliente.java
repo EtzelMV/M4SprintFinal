@@ -1,7 +1,9 @@
-package sprint;
+package entidades;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+
+import sprint.Asesoria;
 
 public class Cliente extends Usuario implements Asesoria {
 	private String telefono;

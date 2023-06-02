@@ -1,6 +1,8 @@
-package sprint;
+package entidades;
 
 import java.time.LocalDate;
+
+import sprint.Asesoria;
 
 public class Profesional extends Usuario implements Asesoria {
 	private String titulo;

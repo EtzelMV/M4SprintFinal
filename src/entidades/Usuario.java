@@ -1,8 +1,10 @@
-package sprint;
+package entidades;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+
+import sprint.Asesoria;
 
 abstract class Usuario implements Asesoria{
 	protected String run;
