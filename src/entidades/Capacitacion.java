@@ -1,4 +1,4 @@
-package sprint;
+package entidades;
 
 import java.time.LocalTime;
 

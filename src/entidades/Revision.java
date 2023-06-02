@@ -1,4 +1,4 @@
-package sprint;
+package entidades;
 
 public class Revision {
 	private int idRevision;
