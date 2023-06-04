@@ -4,9 +4,9 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
-import sprint.Asesoria;
+import sprint.IAsesoria;
 
-abstract class Usuario implements Asesoria{
+abstract class Usuario implements IAsesoria{
 	protected String run;
 	protected String nombres;
 	protected String apellidos;

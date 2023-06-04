@@ -3,9 +3,9 @@ package entidades;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import sprint.Asesoria;
+import sprint.IAsesoria;
 
-public class Cliente extends Usuario implements Asesoria {
+public class Cliente extends Usuario implements IAsesoria {
 	private String telefono;
 	private String afp;
 	private int sistemaDeSalud;

@@ -2,9 +2,9 @@ package entidades;
 
 import java.time.LocalDate;
 
-import sprint.Asesoria;
+import sprint.IAsesoria;
 
-public class Administrativo extends Usuario implements Asesoria {
+public class Administrativo extends Usuario implements IAsesoria {
 	private String area;
 	private String expPrevia;
 	
