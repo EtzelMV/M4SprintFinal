@@ -1,8 +1,12 @@
 package entidades;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
-abstract class Usuario {
+import sprint.Asesoria;
+
+abstract class Usuario implements Asesoria{
 	protected String run;
 	protected String nombres;
 	protected String apellidos;
@@ -83,5 +87,19 @@ abstract class Usuario {
 	public String toString() {
 		return "Usuario [run=" + run + ", nombres=" + nombres + ", apellidos=" + apellidos + ", fechaNacimiento="
 				+ fechaNacimiento + "]";
+	}
+	
+	@Override
+	public void analizarUsuario() {
+		System.out.println("\n\tRun: " + run + "\n\tNombre: " + nombres + "\n\tApellido: " + apellidos);
+	}
+	
+	public void mostrarEdad() {
+		LocalDate hoy = LocalDate.now(); 
+	    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	    LocalDate fechaNac = LocalDate.parse("15/08/1993", fmt);
+	    
+	    Period periodo = Period.between(fechaNac, hoy);
+	    System.out.printf("\n\tEdad: %s años", periodo.getYears());
 	}
 }

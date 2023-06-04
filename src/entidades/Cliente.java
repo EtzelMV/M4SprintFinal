@@ -3,7 +3,9 @@ package entidades;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Cliente extends Usuario {
+import sprint.Asesoria;
+
+public class Cliente extends Usuario implements Asesoria {
 	private String telefono;
 	private String afp;
 	private int sistemaDeSalud;
@@ -182,5 +184,29 @@ public class Cliente extends Usuario {
 				+ fechaNacimiento + ", telefono=" + telefono + ", afp=" + afp + ", sistemaDeSalud=" + sistemaDeSalud
 				+ ", direccion=" + direccion + ", comuna=" + comuna + ", edad=" + edad + ", accidentes=" + accidentes
 				+ ", capacitaciones=" + capacitaciones + "]";
+	}
+	
+	public String obtenerNombre() {
+		return "\n\tNombre completo del cliente: " + nombres + " " + apellidos;
+	}
+	
+	public void obtenerSistemaSalud() {
+		switch (sistemaDeSalud) {
+			case 1:
+				System.out.println("\n\tEl cliente tiene Fonasa.");
+				break;
+			case 2:
+				System.out.println("\n\tEl cliente tiene Isapres.");
+				break;
+			default:
+				System.out.println("\n\tError en el registro del sistema de salud.");
+				break;
+		}
+	}
+
+	@Override
+	public void analizarUsuario() {
+		super.analizarUsuario();
+		System.out.println("\tDirección: " + direccion + "\n\tComuna: " + comuna);
 	}
 }
