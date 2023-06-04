@@ -207,6 +207,6 @@ public class Cliente extends Usuario implements Asesoria {
 	@Override
 	public void analizarUsuario() {
 		super.analizarUsuario();
-		System.out.println("\tDirección: " + direccion + "\n\tComuna: " + comuna);
+		System.out.println("\tDireccion: " + direccion + "\n\tComuna: " + comuna);
 	}
 }

@@ -100,6 +100,6 @@ abstract class Usuario implements Asesoria{
 	    LocalDate fechaNac = LocalDate.parse("15/08/1993", fmt);
 	    
 	    Period periodo = Period.between(fechaNac, hoy);
-	    System.out.printf("\n\tEdad: %s años", periodo.getYears());
+	    System.out.printf("\n\tEdad: %s anyos", periodo.getYears());
 	}
 }
